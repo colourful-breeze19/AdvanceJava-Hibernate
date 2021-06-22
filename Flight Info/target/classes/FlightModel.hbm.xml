@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd"> 
+
+<hibernate-mapping package="com.nagarro.training.dao">
+   <class name = "FlightModel" table = "flight_details">
+     
+      
+      <id name = "FLIGHT_ID" type = "int" column = "FLIGHT_ID">
+         <generator class="native"/>
+      </id>
+      
+      <property name = "flightNO" column = "FLIGHT_NO" type = "string"/>
+      <property name = "departure" column = "DEP_LOC" type = "string"/>
+      <property name = "arrival" column = "ARR_LOC" type = "string"/>
+      
+       <property name = "validTill" column = "VALID_TILL" type = "string"/>
+       
+        <property name = "flightTime" column = "FLIGHT_TIME" type = "string"/>
+         <property name = "flightDuration" column = "FLIGHT_DUR" type = "double"/>
+          <property name = "fare" column = "FARE" type = "double"/>
+          <property name = "availability" column = "SEAT_AVAILABILITY" type = "boolean"/>
+           <property name = "flightClass" column = "CLASS" type = "string"/>
+      
+      
+   </class>
+</hibernate-mapping>
